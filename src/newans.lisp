@@ -506,11 +506,12 @@ TEST-LOOP
 		     (COND ((ISTENSE (PARSENODE? RSS) 'MODAL)
 			    '((SAY I DON\'T KNOW)))
 			   (T '((SAY NO)))))
+		    ((ISTENSE (PARSENODE? RSS) 'MODAL)		       ;A MODAL QUESTION'S YES NAMES NOTHING AFTER IT,
+		     '((SAY YES)))				       ;SO IT TAKES NO COMMA, AS IN WINOGRAD'S DIALOGUE.
 		    (T
 		     (APPEND
 		      '((SAY YES\,))
 		      (COND
-		       ((ISTENSE (PARSENODE? RSS) 'MODAL) NIL)
 		       ((PREPPUT
 			 (APPEND (AND (CDR ANS)
 				      (APPEND (NAMESUGAR LENGTH REL)
