@@ -202,7 +202,7 @@
 (DEFUN THASS1
  (THA P)
  (PROG (THX THY1 THY TYPE PSEUDO)
-       (DECLARE (SPECIAL THX THY TYPE))
+       (DECLARE (SPECIAL THX THY1 THY TYPE))
        (AND (CDR THA) (EQ (CAADR THA) 'THPSEUDO) (SETQ PSEUDO
 							      T))
        
@@ -1596,7 +1596,7 @@ NIL)))
 			    (T (LIST 'THAPPLY X (CAR THX)))))
     (CDR XX)))
   ((EQ (CAR XX) 'THTBF)
-   (MAPCAN #'(LAMBDA (Y) (COND ((APPLY (CADR XX) Y)
+   (MAPCAN #'(LAMBDA (Y) (COND ((FUNCALL (CADR XX) Y)
 					(LIST (LIST 'THAPPLY
 						    Y
 						    (CAR THX))))))
