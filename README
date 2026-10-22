@@ -1,3 +1,8 @@
+This is LispMachineLab's fork of www-shrdlu.  LispM Desktop's SHRDLU
+application runs the Common Lisp of src/ unchanged on Emacs Common Lisp
+(https://github.com/LispMachineLab/emacs-cl), in Emacs, with fixes to
+the 1990s port made here, each compared with the 1972 code in ur-text/.
+
 This project is a revival of Terry Winograd's famous SHRDLU computer
 language project.  SHRDLU was a program meant to 'understand' language
 in a way that is not usually done any more.  By giving SHRDLU
